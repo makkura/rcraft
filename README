@@ -1,6 +1,9 @@
 RCraft: A Ruby Minecraft Server Wrapper
-==========
+
+
+=====
 About:
+=====
 rcraft is a Ruby wrapper for Minecraft
 It requires a Ruby installation and Minecraft server file to run.
 Testing Environment: Ubuntu 10.10 Server
@@ -28,12 +31,16 @@ Kit Config
 Backup system
 Request command restrictions
 
-Usage: 
+=====
+Usage:
+===== 
 Place in the same directory as minecraft_server.jar.
 Directory path, parameters, and differently named jar file will be configurable via config file in the future.
 Run via: ruby rcraft.rb
 
+=======
 History:
+=======
 Version 0.1.1
 Added in hardcoded welcome message and !help command.
 General outline for further ! based commands started.
