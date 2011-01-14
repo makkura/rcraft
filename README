@@ -6,6 +6,8 @@ About:
 =====
 rcraft is a Ruby wrapper for Minecraft
 It requires a Ruby installation and Minecraft server file to run.
+The choice in the name is two fold: R for Ruby and R for Our, as we make minecraft our own.
+
 Testing Environment: Ubuntu 10.10 Server
 
 Intended Features Include:
