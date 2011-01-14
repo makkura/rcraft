@@ -1,0 +1,26 @@
+rcraft is a Ruby wrapper for Minecraft
+It requires a Ruby installation and Minecraft server file to run.
+Testing Environment: Ubuntu 10.10 Server
+
+Intended Features Include:
+-Welcome message (Currently Hardcoded)
+-!help command (Currently rather uhhelpful)
+-!request command for players to request items and Kits(Future)
+--Uses server command: give <player> <id> <quantity>
+--Format: !request <quantity> <item>
+--Example: !request 10 Stone
+--Friendly item names: Use item names rather than ID's 
+--Support requests for more than 64 of an item
+--MOD Friendly: Unrecognized items IDs will attempt to request the item by ID
+-System to control access to !request including partial access (Future)
+-!players command for players to see the list of other logged in players (Future)
+--Uses server command: list
+-Backup system that will shut down the server, back it up, and restart the server (Future)
+
+Feature Priority:
+Player List
+Config Files
+Request command
+Kit Config
+Backup system
+Request command restrictions
