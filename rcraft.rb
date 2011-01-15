@@ -1,4 +1,6 @@
 require 'open3'
+require 'yaml'
+
 module Process
 	# Method to determine running process from tonystubblebine
 	# via: http://stackoverflow.com/questions/325082/how-can-i-check-from-ruby-whether-a-process-with-a-certain-pid-is-running
@@ -13,8 +15,13 @@ module Process
 end
 
 begin
+# Load up the config file
+config = YAML.load_file("config.yml")
+server = config["server"] || "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
+welcome_msg = config["welcome"] || ""
+
 # Open minecraft
-stdin, stdout, stderr, wait_thr = Open3.popen3('java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui')
+stdin, stdout, stderr, wait_thr = Open3.popen3(server)
 
 # Grab process id's to watch all the threads
 mc_pid = wait_thr[:pid]
@@ -51,7 +58,7 @@ while(true) # Always, like sasquatch
 					player = line.scan /\[INFO\] (\w*) .* logged in/i
 					player.flatten!
 					player = player[0].to_s
-					stdin.puts "tell #{player} Welcome! Cartographer Images at: minecraft.goingasplannedby.us !  !help for command list."
+					stdin.puts "tell #{player} #{welcome_msg}"
 				when /\[INFO\] <(\w*)> (!.*)$/i  # Player input
 					command = line.scan /\[INFO\] <(\w*)> (!.*)$/i	
 					command.flatten!
@@ -107,4 +114,3 @@ rescue Exception => e
 	end
 	Process.exit! 
 end
-
