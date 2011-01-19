@@ -1,0 +1,86 @@
+# Full listing, some of these should probably be removed
+Air: 0
+Stone: 1
+Grass: 2
+Dirt:  3
+Cobblestone: 4
+Wooden Plank: 5
+Sapbling: 6
+Bedrock: 7
+Water: 8
+Stationary Water: 9
+Lava: 10
+Stationary Lava: 11
+Sand: 12
+Gravel: 13
+Gold Ore: 14
+Iron Ore: 15
+Coal Ore: 16
+Wood: 17
+Leaves: 18
+Sponge: 19
+Glass: 20
+Lapis Lazuli Ore: 21
+Lapis Lazuli Block: 22
+Dispenser: 23
+Sandstone: 24
+Note Block: 25
+Wool: 35
+Yellow Flower: 37
+Red Rose: 38
+Brown Mushroom: 39
+Red Mushroom: 40
+Gold Block: 41
+Iron Block: 42
+Double Stone Slab: 43
+Stone Slab: 44
+Brick: 45
+TNT: 46
+Bookshelf: 47
+Moss Stone: 48
+Obsidian: 49
+Torch: 50
+Fire: 51
+Monster Spawner: 52
+Wooden Stairs: 53
+Chest: 54
+Redstone Wire: 55
+Diamond Ore: 56
+Diamond Block: 57
+Workbench: 58
+Crops: 59
+Soil: 60
+Furnace: 61
+Burning Furnace: 62
+Sign Post: 63
+Wooden Door: 64
+Ladder: 65
+Minecart Tracks: 66
+Cobblestone Stairs: 67
+Wall Sign: 68
+Lever: 69
+Stone Pressure Plate: 70
+Iron Door: 71
+Wooden Pressure Plate: 72
+Redstone Ore: 73
+Glowing Redstone Ore:
+Redstone Torch Off: 75
+Redstone Torch On: 76
+Stone Button: 77
+Snow: 78
+Ice: 79
+Snow Block: 80
+Cactus: 81
+Clay: 82
+Sugar Cane: 83
+Jukebox: 84
+Fence: 85
+Pumpkin: 86
+Netherrack: 87
+Soul Sand: 88
+Glowtone: 89
+Portal: 90
+Jack-O-Lantern: 91
+Cake Block: 92
+Iron Shovel: 256
+Iron Pickaxe: 257

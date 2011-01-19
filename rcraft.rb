@@ -20,6 +20,9 @@ config = YAML.load_file("config.yml")
 server = config["server"] || "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
 welcome_msg = config["welcome"] || ""
 
+# Load the item list
+item_list = YAML.load_file("itemlist.yml")
+item_keys = item_list.keys
 # Open minecraft
 stdin, stdout, stderr, wait_thr = Open3.popen3(server)
 
@@ -70,8 +73,25 @@ while(true) # Always, like sasquatch
 						when /!help$/i 
 							stdin.puts "tell #{player} Available commands include: "
 							stdin.puts "tell #{player}  !help"
-							#stdin.puts "tell #{player}  !request"
+							stdin.puts "tell #{player}  !pray quanity item"
 							#stdin.puts "tell #{player}  !list"
+						when /!request/i
+							# !request <quantity> <item>
+							# Item request found, evaluate the request
+							item_request = request.scan /!request (\d*) (.*)$/i
+							item_request.flatten!
+							puts "Request: #{item_request}"
+							quantity = item_request.shift
+							item = item_request.shift
+							item.strip!
+							# match casing with the item list
+							item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+
+							if item_list.include? item
+								stdin.puts "give #{player} #{item_list[item]} #{quantity}"
+							else
+								stdin.puts "tell #{player} #{item} not found"
+							end
 						else
 							#do nothing
 					end
