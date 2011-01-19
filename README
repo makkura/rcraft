@@ -25,14 +25,6 @@ Intended Features Include:
 --Uses server command: list
 -Backup system that will shut down the server, back it up, and restart the server (Future)
 
-Feature Priority:
-Player List
-Config Files
-Request command
-Kit Config
-Backup system
-Request command restrictions
-
 =====
 Usage:
 ===== 
@@ -43,6 +35,12 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+Version 0.1.3
+Added in a partial item list, initial request command.
+
+Version 0.1.2
+Added config file for dynamic welcome message and minecraft server path
+
 Version 0.1.1
 Added in hardcoded welcome message and !help command.
 General outline for further ! based commands started.
