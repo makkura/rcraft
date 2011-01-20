@@ -29,7 +29,7 @@ Features:
 - !players command for players to see the list of other logged in players (Future)
 -- Uses server command: list
 - Backup system that will shut down the server, back it up, and restart the server (Future)
-
+- Chat log of player chat (Probably needs trimming)
 =====
 Usage:
 ===== 

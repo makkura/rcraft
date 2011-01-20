@@ -1,5 +1,6 @@
 require 'open3'
 require 'yaml'
+requier 'logger'
 
 module Process
 	# Method to determine running process from tonystubblebine
@@ -15,10 +16,16 @@ module Process
 end
 
 begin
+
 # Load up the config file
 config = YAML.load_file("config.yml")
 server = config["server"] || "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
 welcome_msg = config["welcome"] || ""
+log_file = config["logfile"] || "minecraft.log"
+log_frequency = config["logfrequency"] || "monthly"
+
+# Set up a log
+log = Logger.new(logfile, shift_age="#{log_frequency}" )
 
 # Load the item list
 item_list = YAML.load_file("itemlist.yml")
@@ -55,8 +62,14 @@ while(true) # Always, like sasquatch
 		end
 
 		stderr.each_line do |line|
-			puts line	
-			case line.strip
+			line.strip!
+			puts line
+
+			# Log if it is chat or user commands
+			if line =~ /\[INFO\] <\w*>/
+			   log.info line
+			end
+			case line
 				when /\[INFO\] (\w*) .* logged in/i
 					player = line.scan /\[INFO\] (\w*) .* logged in/i
 					player.flatten!
