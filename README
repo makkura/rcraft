@@ -40,6 +40,9 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+Version 0.1.5
+Added logging of player text. Logged text needs trimmed of server timestamp, since logger duplicates it.
+
 Version 0.1.4
 Completed item list, added !item command to search for item names, fixed a logic error allowing bad command matches
 

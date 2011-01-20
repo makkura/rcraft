@@ -1,6 +1,6 @@
 require 'open3'
 require 'yaml'
-requier 'logger'
+require 'logger'
 
 module Process
 	# Method to determine running process from tonystubblebine
@@ -25,7 +25,7 @@ log_file = config["logfile"] || "minecraft.log"
 log_frequency = config["logfrequency"] || "monthly"
 
 # Set up a log
-log = Logger.new(logfile, shift_age="#{log_frequency}" )
+log = Logger.new(log_file, shift_age="#{log_frequency}" )
 
 # Load the item list
 item_list = YAML.load_file("itemlist.yml")
