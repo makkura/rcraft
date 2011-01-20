@@ -1,3 +1,5 @@
 server: java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
 welcome: Welcome to a Minecraft Server!
+logfile: mc_server_player.log
+logfrequency: monthly
 
