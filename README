@@ -1,5 +1,5 @@
 RCraft: A Ruby Minecraft Server Wrapper
-
+Verion 0.1.4
 
 =====
 About:
@@ -10,20 +10,25 @@ The choice in the name is two fold: R for Ruby and R for Our, as we make minecra
 
 Testing Environment: Ubuntu 10.10 Server
 
-Intended Features Include:
--Welcome message (Currently Hardcoded)
--!help command (Currently rather uhhelpful)
--!request command for players to request items and Kits(Future)
---Uses server command: give <player> <id> <quantity>
---Format: !request <quantity> <item>
---Example: !request 10 Stone
---Friendly item names: Use item names rather than ID's 
---Support requests for more than 64 of an item
---MOD Friendly: Unrecognized items IDs will attempt to request the item by ID
--System to control access to !request including partial access (Future)
--!players command for players to see the list of other logged in players (Future)
---Uses server command: list
--Backup system that will shut down the server, back it up, and restart the server (Future)
+Features:
+- Welcome message (Via config.yml)
+- !help command (basic implimentation)
+- !request command for players to request items (implimented) and Kits(Future)
+-- Listing comes from itemlist.yml
+-- Uses server command: give <player> <id> <quantity>
+-- Format: !request <quantity> <item>
+-- Example: !request 10 Stone
+-- Friendly item names: Use item names rather than ID's 
+-- Support requests for more than 64 of an item (Future)
+-- MOD Friendly: Unrecognized items IDs will attempt to request the item by ID (Future)
+- !item command to request listing of matching items (implimented)
+-- Format: !item name
+-- Example: !item ore 
+-- Result: Listing of all items with 'ore' in their names
+- System to control access to !request including partial access (Future)
+- !players command for players to see the list of other logged in players (Future)
+-- Uses server command: list
+- Backup system that will shut down the server, back it up, and restart the server (Future)
 
 =====
 Usage:
@@ -35,6 +40,9 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+Version 0.1.4
+Completed item list, added !item command to search for item names, fixed a logic error allowing bad command matches
+
 Version 0.1.3
 Added in a partial item list, initial request command.
 
