@@ -73,8 +73,8 @@ while(true) # Always, like sasquatch
 						when /!help$/i 
 							stdin.puts "tell #{player} Available commands include: "
 							stdin.puts "tell #{player}  !help"
-							stdin.puts "tell #{player}  !pray quanity item"
-							#stdin.puts "tell #{player}  !list"
+							stdin.puts "tell #{player}  !request quanity item"
+							stdin.puts "tell #{player}  !list item name"
 						when /!request/i
 							# !request <quantity> <item>
 							# Item request found, evaluate the request
@@ -92,6 +92,16 @@ while(true) # Always, like sasquatch
 							else
 								stdin.puts "tell #{player} #{item} not found"
 							end
+            when /!item/i 
+              item_inquery = request.scan /!item (.*)$/i
+              item_inquery.flatten!
+              item = item_inquery.shift
+              puts "Inquery: #{item}"
+              item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+              stdin.puts "tell #{player} Possible items are:"
+              item_keys.each do |key|
+                stdin.puts "tell #{player} #{key}" unless !key.include? item
+              end
 						else
 							#do nothing
 					end
