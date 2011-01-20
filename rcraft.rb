@@ -75,7 +75,7 @@ while(true) # Always, like sasquatch
 							stdin.puts "tell #{player}  !help"
 							stdin.puts "tell #{player}  !request quanity item"
 							stdin.puts "tell #{player}  !list item name"
-						when /!request/i
+						when /!request (\d*) (.*)$/i
 							# !request <quantity> <item>
 							# Item request found, evaluate the request
 							item_request = request.scan /!request (\d*) (.*)$/i
@@ -92,7 +92,7 @@ while(true) # Always, like sasquatch
 							else
 								stdin.puts "tell #{player} #{item} not found"
 							end
-            when /!item/i 
+            when /!item (.*)$/i 
               item_inquery = request.scan /!item (.*)$/i
               item_inquery.flatten!
               item = item_inquery.shift
