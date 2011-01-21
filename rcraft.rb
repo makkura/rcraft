@@ -101,7 +101,8 @@ while(true) # Always, like sasquatch
 							item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
 
 							if item_list.include? item
-								stdin.puts "give #{player} #{item_list[item]} #{quantity}"
+							   (quantity.to_f/64).times stdin.puts "give #{player} #{item_list[item]} 64"
+							   stdin.puts "give #{player} #{quantity.to_f % 64} #{item_list[item]}" unless 9quantity.to_f % 64) == 0							
 							else
 								stdin.puts "tell #{player} #{item} not found"
 							end
