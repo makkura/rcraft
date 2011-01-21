@@ -171,7 +171,8 @@ rescue Exception => e
         puts "Stopping minecraft_server"
         wait_time = 15
         (wait_time.to_i / 5).times do |loop_number|
-            stdin.puts "say Server is going down in #{(wait_time.to_i) - ((loop_number - 1)*5) }s"
+            # loop number starts at 0 rather than 1
+            stdin.puts "say Server is going down in #{(wait_time.to_i) - (loop_number * 5) }s"
             sleep 5
         end
         stdin.puts "stop"
