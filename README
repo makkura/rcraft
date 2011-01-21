@@ -13,15 +13,15 @@ Testing Environment: Ubuntu 10.10 Server
 Features:
 - Welcome message (Via config.yml)
 - !help command (basic implimentation)
-- !request command for players to request items (implimented) and Kits(Future)
+- !request command for players to request items (Implimented) and Kits(Future)
 -- Listing comes from itemlist.yml
 -- Uses server command: give <player> <id> <quantity>
 -- Format: !request <quantity> <item>
 -- Example: !request 10 Stone
 -- Friendly item names: Use item names rather than ID's 
--- Support requests for more than 64 of an item (Future)
--- MOD Friendly: Unrecognized items IDs will attempt to request the item by ID (Future)
-- !item command to request listing of matching items (implimented)
+-- Support requests for more than 64 of an item (Implimented)
+-- MOD Friendly: Unrecognized items IDs will attempt to request the item by ID (Implimented)
+- !item command to request listing of matching items (Implimented)
 -- Format: !item name
 -- Example: !item ore 
 -- Result: Listing of all items with 'ore' in their names
@@ -29,7 +29,7 @@ Features:
 - !players command for players to see the list of other logged in players (Future)
 -- Uses server command: list
 - Backup system that will shut down the server, back it up, and restart the server (Future)
-- Chat log of player chat (Probably needs trimming)
+- Chat log of player chat (Implimented), Player join and exit (Future)
 =====
 Usage:
 ===== 
@@ -40,6 +40,11 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+version 0.1.6
+Added item requests by IDs and items quantities greater than 64
+Fixed logging to remove redundant timestamp
+Added friendly server message for when the server goes down in a full exit
+
 Version 0.1.5
 Added logging of player text. Logged text needs trimmed of server timestamp, since logger duplicates it.
 
