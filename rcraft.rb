@@ -170,8 +170,8 @@ rescue Exception => e
     if Process.running?(mc_pid) and own_pid == parent_pid
         puts "Stopping minecraft_server"
         wait_time = 15
-        (wait_time % 5).times do |loop_number|
-            stdin.puts "say Server is going down in #{(wait_time % 5) - ((loop_number - 1)*5) }s"
+        (wait_time.to_i / 5).times do |loop_number|
+            stdin.puts "say Server is going down in #{(wait_time.to_i) - ((loop_number - 1)*5) }s"
         end
         stdin.puts "stop"
         sleep 5
