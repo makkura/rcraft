@@ -2,6 +2,8 @@ require 'open3'
 require 'yaml'
 require 'logger'
 
+# Additions to built in modules / classes to make life easier
+
 module Process
     # Method to determine running process from tonystubblebine
     # via: http://stackoverflow.com/questions/325082/how-can-i-check-from-ruby-whether-a-process-with-a-certain-pid-is-running
@@ -14,6 +16,14 @@ module Process
         end
     end
 end
+
+class String
+    def is_numeric?
+         Float self rescue false # Short and sweet since an actual value does evaluate true
+    end
+end
+
+# Let the actual process get started!
 
 begin
 
@@ -108,7 +118,16 @@ begin
                                 stdin.puts "give #{player} #{item_list[item]} #{quantity.to_i % 64}"
                             end
                         else
-                            stdin.puts "tell #{player} #{item} not found"
+                            if item.is_numeric?
+                                (quantity.to_i/64).times do
+                                    stdin.puts "give #{player} #{item} 64"
+                                end
+                                if (quantity.to_i % 64) > 0
+                                    stdin.puts "give #{player} #{item} #{quantity.to_i % 64}"
+                                end
+                            else
+                                stdin.puts "tell #{player} #{item} not found"
+                            end
                         end
                     when /!item (.*)$/i
                         item_inquery = request.scan /!item (.*)$/i
@@ -150,15 +169,19 @@ rescue Exception => e
     # Attempt a clean close if possible
     if Process.running?(mc_pid) and own_pid == parent_pid
         puts "Stopping minecraft_server"
+        wait_time = 15
+        (wait_time % 5).times do |loop_number|
+            stdin.puts "say Server is going down in #{(wait_time % 5) - ((loop_number - 1)*5) }s"
+        end
         stdin.puts "stop"
         sleep 5
         # Give it a chance to stop normally
         if Process.running?(mc_pid)
-        stdin.close
-        stdout.close
-        stderr.close
-        wait_thr.close
+            stdin.close
+            stdout.close
+            stderr.close
+            wait_thr.close
         end
     end
-Process.exit!
+    Process.exit!
 end
