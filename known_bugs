@@ -1,0 +1,7 @@
+Known Bugs:
+
+Item names with multiple capital letters in them (eg: TNT) do not appear
+when using !request tnt or !item tnt  because it is treated as Tnt rather than TNT
+- Proposed solution: upper case all input words and either upper case all items on the item list or rewrite it
+- to be all upper case to begin with
+
