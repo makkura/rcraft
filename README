@@ -30,6 +30,9 @@ Features:
 -- Uses server command: list
 - Backup system that will shut down the server, back it up, and restart the server (Future)
 - Chat log of player chat (Implimented), Player join and exit (Future)
+- Togglable whitelist & blacklist for private / public server setups (Future)
+-- Black listing may not be necessary due to banning
+-- Whitelist would allow ONLY people on the list to login. Private server style feature.
 =====
 Usage:
 ===== 
