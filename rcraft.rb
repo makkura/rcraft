@@ -77,7 +77,7 @@ begin
 
                 # Log if it is chat or user commands
                 if line =~ /\[INFO\] <\w*>/
-                    log.info (line.scan /\[INFO\] (<\w*>.*)/).flatten.shift
+                    log.info ((line.scan /\[INFO\] (<\w*>.*)/).flatten.shift)
                 end
                 case line
                 when /\[INFO\] (\w*) .* logged in/i
