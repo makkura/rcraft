@@ -102,6 +102,8 @@ begin
                         stdin.puts "tell #{player}  !help"
                         stdin.puts "tell #{player}  !request quanity item"
                         stdin.puts "tell #{player}  !list item name"
+                        stdin.puts "tell #{player}  !kit kitname"
+                        stdin.puts "tell #{player}  !kits"
                     when /!request (.*)$/i
                         # !request <quantity> <item>
                         # If no quantity, assume 1
@@ -158,7 +160,7 @@ begin
                     when /!kits$/i
                     	stdin.puts "tell #{player} Possible Kits are:"
                     	kit_list.keys.each do |kit|	
-							stdin.puts "tell #{player}: #{kit} "
+							stdin.puts "tell #{player} -#{kit} "
 						end
                     when /!item (.*)$/i
                         item_inquery = request.scan /!item (.*)$/i
