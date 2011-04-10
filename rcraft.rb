@@ -40,6 +40,10 @@ begin
     # Load the item list
     item_list = YAML.load_file("itemlist.yml")
     item_keys = item_list.keys
+    
+    # Load the kit list
+    kit_list = YAML.load_file("kits.yml")
+    
     # Open minecraft
     stdin, stdout, stderr, wait_thr = Open3.popen3(server)
 
@@ -137,6 +141,21 @@ begin
                                 stdin.puts "tell #{player} #{item} not found"
                             end
                         end
+                    when /!kit (.*)$/i
+                    	kit_request = request.scan /!kit (.*)$/i
+                    	kit_request.flatten!
+                    	kit = kit_request.shift
+                    	puts "Kit Request: #{kit}"
+                    	
+                    	kit.upcase!
+                    	if kit_list.include? kit
+                    		kit_list[kit].each do |sub_item|
+                    			sub_item.each_pair do |key, value|
+                    				stdin.puts "give #{player} #{item_list[key]} #{value.to_i}
+                    			end
+                    		end
+                    	end
+                    	
                     when /!item (.*)$/i
                         item_inquery = request.scan /!item (.*)$/i
                         item_inquery.flatten!
