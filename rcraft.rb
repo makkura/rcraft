@@ -151,7 +151,7 @@ begin
                     	if kit_list.include? kit
                     		kit_list[kit].each do |sub_item|
                     			sub_item.each_pair do |key, value|
-                    				stdin.puts "give #{player} #{item_list[key]} #{value.to_i}"
+                    				stdin.puts "give #{player} #{item_list[key]} #{value[0].to_i}"
                     			end
                     		end
                     	end
