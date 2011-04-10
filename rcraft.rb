@@ -155,7 +155,11 @@ begin
                     			end
                     		end
                     	end
-                    	
+                    when /!kits$/i
+                    	stdin.puts "tell #{player} Possible Kits are:"
+                    	kit_list.keys.each do |kit|	
+							stdin.puts "tell #{player}: #{kit} "
+						end
                     when /!item (.*)$/i
                         item_inquery = request.scan /!item (.*)$/i
                         item_inquery.flatten!
