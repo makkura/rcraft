@@ -43,6 +43,12 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+Version 0.1.7
+Improved item requests so if no quantity is listed it assumes 1 was requested
+Updated item list to fix known bug involving casing
+Updated item list with new items since last update
+Thanks go out to Exar for some motivation and the item list updates
+
 version 0.1.6
 Added item requests by IDs and items quantities greater than 64
 Fixed logging to remove redundant timestamp

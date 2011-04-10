@@ -1,185 +1,192 @@
-# Full listing, some of these should probably be removed
-Air: 0
-Stone: 1
-Grass: 2
-Dirt:  3
-Cobblestone: 4
-Wooden Plank: 5
-Sapbling: 6
-Bedrock: 7
-Water: 8
-Stationary Water: 9
-Lava: 10
-Stationary Lava: 11
-Sand: 12
-Gravel: 13
-Gold Ore: 14
-Iron Ore: 15
-Coal Ore: 16
-Wood: 17
-Leaves: 18
-Sponge: 19
-Glass: 20
-Lapis Lazuli Ore: 21
-Lapis Lazuli Block: 22
-Dispenser: 23
-Sandstone: 24
-Note Block: 25
-Wool: 35
-Yellow Flower: 37
-Red Rose: 38
-Brown Mushroom: 39
-Red Mushroom: 40
-Gold Block: 41
-Iron Block: 42
-Double Stone Slab: 43
-Stone Slab: 44
-Brick: 45
+# FULL LISTING, SOME OF THESE SHOULD PROBABLY BE REMOVED
+AIR: 0
+STONE: 1
+GRASS: 2
+DIRT:  3
+COBBLESTONE: 4
+WOODEN PLANK: 5
+SAPLING: 6
+BEDROCK: 7
+WATER: 8
+STATIONARY WATER: 9
+LAVA: 10
+STATIONARY LAVA: 11
+SAND: 12
+GRAVEL: 13
+GOLD ORE: 14
+IRON ORE: 15
+COAL ORE: 16
+WOOD: 17
+LEAVES: 18
+SPONGE: 19
+GLASS: 20
+LAPIS LAZULI ORE: 21
+LAPIS LAZULI BLOCK: 22
+DISPENSER: 23
+SANDSTONE: 24
+NOTE BLOCK: 25
+BED: 26
+WOOL: 35
+YELLOW FLOWER: 37
+RED ROSE: 38
+BROWN MUSHROOM: 39
+RED MUSHROOM: 40
+GOLD BLOCK: 41
+IRON BLOCK: 42
+DOUBLE STONE SLAB: 43
+STONE SLAB: 44
+BRICK: 45
 TNT: 46
-Bookshelf: 47
-Moss Stone: 48
-Obsidian: 49
-Torch: 50
-Fire: 51
-Monster Spawner: 52
-Wooden Stairs: 53
-Chest: 54
-Redstone Wire: 55
-Diamond Ore: 56
-Diamond Block: 57
-Workbench: 58
-Crops: 59
-Soil: 60
-Furnace: 61
-Burning Furnace: 62
-Sign Post: 63
-Wooden Door: 64
-Ladder: 65
-Minecart Tracks: 66
-Cobblestone Stairs: 67
-Wall Sign: 68
-Lever: 69
-Stone Pressure Plate: 70
-Iron Door: 71
-Wooden Pressure Plate: 72
-Redstone Ore: 73
-Glowing Redstone Ore:
-Redstone Torch Off: 75
-Redstone Torch On: 76
-Stone Button: 77
-Snow: 78
-Ice: 79
-Snow Block: 80
-Cactus: 81
-Clay: 82
-Sugar Cane: 83
-Jukebox: 84
-Fence: 85
-Pumpkin: 86
-Netherrack: 87
-Soul Sand: 88
-Glowstone: 89
-Portal: 90
-Jack-O-Lantern: 91
-Cake Block: 92
-Iron Shovel: 256
-Iron Pickaxe: 257
-Iron Axe: 258
-Flint And Steel: 259
-Apple: 260
-Bow: 261
-Arrow: 262
-Coal: 263
-Diamond: 264
-Iron Ingot: 265
-Gold Ingot: 266
-Iron Sword: 267
-Wooden Sword: 268
-Wooden Shovel: 269
-Wooden Pickaxe: 270
-Wooden Axe: 271
-Stone Sword: 272
-Stone Shovel: 273
-Stone Pickaxe: 274
-Stone Axe: 275
-Diamond Sword: 276
-Diamond Shovel: 277
-Diamond Pickaxe: 278
-Diamond Axe: 279
-Stick: 280
-Bowl: 281
-Mushroom Soup: 282
-Gold Sword: 283
-Gold Shovel: 284
-Gold Pickaxe: 285
-Gold Axe: 286
-String: 287
-Feather: 288
-Sulphur: 289
-Wooden Hoe: 290
-Stone Hoe: 291
-Iron Hoe: 292
-Diamond Hoe: 293
-Gold Hoe: 294
-Seeds: 295
-Wheat: 296
-Bread: 297
-Leather Helmet: 298
-Leather Chestplate: 299
-Leather Leggings: 300
-Leather Boots: 301
-Chainmail Helmet: 302
-Chainmail Chestplate: 303
-Chainmail Leggings: 304
-Chainmail Boots: 305
-Iron Helmet: 306
-Iron Chestplate: 307
-Iron Leggings: 308
-Iron Boots: 309
-Diamond Helmet: 310
-Diamond Chestplate: 311
-Diamond Leggings: 312
-Diamond Boots: 313
-Gold Helmet: 314
-Gold Chestplate: 315
-Gold Leggings: 316
-Gold Boots: 317
-Flint: 318
-Raw Porkchop: 319
-Cooked Porkchop: 320
-Paintings: 321
-Golden Apple: 322
-Sign: 323
-Wooden Door: 324
-Bucket: 325
-Water Bucket: 326
-Lava Bucket: 327
-Minecart: 328
-Saddle: 329
-Iron Door: 330
-Redstone: 331
-Snowball: 332
-Boat: 333
-Leather: 334
-Milk: 335
-Clay Brick: 336
-Clay Balls: 337
-Sugar Cane: 338
-Paper: 339
-Book: 340
-Slimeball: 341 
-Storage Minecart: 342
-Powered Minecart: 343
-Egg: 344
-Compass: 345
-Fishing Rod: 346
-Clock: 347
-Glowstone Dust: 348
-Raw Fish: 349
-Cooked Fish: 350
-Ink Sack: 351
-Bone: 352
-Suar: 352
-Cake: 354
-Gold Music Disc: 2256
-Green Music Disc: 2257
+BOOKSHELF: 47
+MOSS STONE: 48
+OBSIDIAN: 49
+TORCH: 50
+FIRE: 51
+MONSTER SPAWNER: 52
+WOODEN STAIRS: 53
+CHEST: 54
+REDSTONE WIRE: 55
+DIAMOND ORE: 56
+DIAMOND BLOCK: 57
+WORKBENCH: 58
+CROPS: 59
+SOIL: 60
+FURNACE: 61
+BURNING FURNACE: 62
+SIGN POST: 63
+WOODEN DOOR: 64
+LADDER: 65
+MINECART TRACKS: 66
+COBBLESTONE STAIRS: 67
+WALL SIGN: 68
+LEVER: 69
+STONE PRESSURE PLATE: 70
+IRON DOOR: 71
+WOODEN PRESSURE PLATE: 72
+REDSTONE ORE: 73
+GLOWING REDSTONE ORE:
+REDSTONE TORCH OFF: 75
+REDSTONE TORCH ON: 76
+STONE BUTTON: 77
+SNOW: 78
+ICE: 79
+SNOW BLOCK: 80
+CACTUS: 81
+CLAY: 82
+SUGAR CANE: 83
+JUKEBOX: 84
+FENCE: 85
+PUMPKIN: 86
+NETHERRACK: 87
+SOUL SAND: 88
+GLOWSTONE: 89
+PORTAL: 90
+JACK-O-LANTERN: 91
+CAKE BLOCK: 92
+REDSTONE REPEATER OFF: 93
+REDSTONE REPEATER ON: 94
+LOCKED CHEST: 95
+IRON SHOVEL: 256
+IRON PICKAXE: 257
+IRON AXE: 258
+FLINT AND STEEL: 259
+APPLE: 260
+BOW: 261
+ARROW: 262
+COAL: 263
+DIAMOND: 264
+IRON INGOT: 265
+GOLD INGOT: 266
+IRON SWORD: 267
+WOODEN SWORD: 268
+WOODEN SHOVEL: 269
+WOODEN PICKAXE: 270
+WOODEN AXE: 271
+STONE SWORD: 272
+STONE SHOVEL: 273
+STONE PICKAXE: 274
+STONE AXE: 275
+DIAMOND SWORD: 276
+DIAMOND SHOVEL: 277
+DIAMOND PICKAXE: 278
+DIAMOND AXE: 279
+STICK: 280
+BOWL: 281
+MUSHROOM SOUP: 282
+GOLD SWORD: 283
+GOLD SHOVEL: 284
+GOLD PICKAXE: 285
+GOLD AXE: 286
+STRING: 287
+FEATHER: 288
+GUNPOWDER: 289
+WOODEN HOE: 290
+STONE HOE: 291
+IRON HOE: 292
+DIAMOND HOE: 293
+GOLD HOE: 294
+SEEDS: 295
+WHEAT: 296
+BREAD: 297
+LEATHER HELMET: 298
+LEATHER CHESTPLATE: 299
+LEATHER LEGGINGS: 300
+LEATHER BOOTS: 301
+CHAINMAIL HELMET: 302
+CHAINMAIL CHESTPLATE: 303
+CHAINMAIL LEGGINGS: 304
+CHAINMAIL BOOTS: 305
+IRON HELMET: 306
+IRON CHESTPLATE: 307
+IRON LEGGINGS: 308
+IRON BOOTS: 309
+DIAMOND HELMET: 310
+DIAMOND CHESTPLATE: 311
+DIAMOND LEGGINGS: 312
+DIAMOND BOOTS: 313
+GOLD HELMET: 314
+GOLD CHESTPLATE: 315
+GOLD LEGGINGS: 316
+GOLD BOOTS: 317
+FLINT: 318
+RAW PORKCHOP: 319
+COOKED PORKCHOP: 320
+PAINTINGS: 321
+GOLDEN APPLE: 322
+SIGN: 323
+WOODEN DOOR: 324
+BUCKET: 325
+WATER BUCKET: 326
+LAVA BUCKET: 327
+MINECART: 328
+SADDLE: 329
+IRON DOOR: 330
+REDSTONE: 331
+SNOWBALL: 332
+BOAT: 333
+LEATHER: 334
+MILK: 335
+CLAY BRICK: 336
+CLAY BALLS: 337
+SUGAR CANE: 338
+PAPER: 339
+BOOK: 340
+SLIMEBALL: 341 
+STORAGE MINECART: 342
+POWERED MINECART: 343
+EGG: 344
+COMPASS: 345
+FISHING ROD: 346
+CLOCK: 347
+GLOWSTONE DUST: 348
+RAW FISH: 349
+COOKED FISH: 350
+DYE: 351
+BONE: 352
+SUGAR: 352
+CAKE: 354
+BED: 355
+REDSTONE REPEATER: 356
+COOKIE: 357
+GOLD MUSIC DISC: 2256
+GREEN MUSIC DISC: 2257

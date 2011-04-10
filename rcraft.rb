@@ -115,7 +115,8 @@ begin
                         item = item_request.shift
                         item.strip!
                         # match casing with the item list
-                        item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+                        #item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+						item.upcase!
 
                         if item_list.include? item
                             (quantity.to_i/64).times do
@@ -141,7 +142,8 @@ begin
                         item_inquery.flatten!
                         item = item_inquery.shift
                         puts "Inquery: #{item}"
-                        item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+                        #item.gsub!(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
+                        item.upcase!
                         stdin.puts "tell #{player} Possible items are:"
                         item_keys.each do |key|
                             stdin.puts "tell #{player} #{key}" unless !key.include? item
