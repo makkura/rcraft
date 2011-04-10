@@ -98,11 +98,18 @@ begin
                         stdin.puts "tell #{player}  !help"
                         stdin.puts "tell #{player}  !request quanity item"
                         stdin.puts "tell #{player}  !list item name"
-                    when /!request (\d*) (.*)$/i
+                    when /!request (.*)$/i
                         # !request <quantity> <item>
+                        # If no quantity, assume 1
                         # Item request found, evaluate the request
                         item_request = request.scan /!request (\d*) (.*)$/i
                         item_request.flatten!
+                        if item_request.empty?
+                        	# No quantity listed, insert one
+                        	request.insert(8, " 1 ")
+                        	item_request = request.scan /!request (\d*) (.*)$/i
+                        	item_request.flatten!
+                        end
                         puts "Request: #{item_request}"
                         quantity = item_request.shift
                         item = item_request.shift
