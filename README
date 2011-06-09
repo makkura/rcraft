@@ -1,5 +1,5 @@
 RCraft: A Ruby Minecraft Server Wrapper
-Verion 0.1.4
+Verion 0.1.8
 
 =====
 About:
@@ -13,26 +13,23 @@ Testing Environment: Ubuntu 10.10 Server
 Features:
 - Welcome message (Via config.yml)
 - !help command (basic implimentation)
-- !request command for players to request items (Implimented) and Kits(Future)
+- !request command for players to request items  and Kits
 -- Listing comes from itemlist.yml
 -- Uses server command: give <player> <id> <quantity>
 -- Format: !request <quantity> <item>
 -- Example: !request 10 Stone
 -- Friendly item names: Use item names rather than ID's 
--- Support requests for more than 64 of an item (Implimented)
--- MOD Friendly: Unrecognized items IDs will attempt to request the item by ID (Implimented)
-- !item command to request listing of matching items (Implimented)
+-- Support requests for more than 64 of an item 
+-- MOD Friendly: Unrecognized items IDs will attempt to request the item by ID
+- !item command to request listing of matching items
 -- Format: !item name
 -- Example: !item ore 
 -- Result: Listing of all items with 'ore' in their names
-- System to control access to !request including partial access (Future)
 - !players command for players to see the list of other logged in players (Future)
 -- Uses server command: list
 - Backup system that will shut down the server, back it up, and restart the server (Future)
-- Chat log of player chat (Implimented), Player join and exit (Future)
-- Togglable whitelist & blacklist for private / public server setups (Future)
--- Black listing may not be necessary due to banning
--- Whitelist would allow ONLY people on the list to login. Private server style feature.
+- Command to change the server time. Convenient for when multiple people are logged in.
+-- Will need something to restrict spamming time changes.
 =====
 Usage:
 ===== 
@@ -43,6 +40,9 @@ Run via: ruby rcraft.rb
 =======
 History:
 =======
+Version 0.1.8
+Minor update of the item list and the readme.
+
 Version 0.1.7
 Improved item requests so if no quantity is listed it assumes 1 was requested
 Updated item list to fix known bug involving casing
